@@ -7,8 +7,9 @@
 
 import Foundation
 
-struct Coin: Codable {
-    let id, symbol, name: String
+struct Coin: Codable, Identifiable {
+    let id: String
+    let symbol, name: String
     let image: String
     let currentPrice: Double
     let marketCap, marketCapRank, fullyDilutedValuation: Double?
